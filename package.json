@@ -2,9 +2,9 @@
   "name": "speechnode",
   "version": "1.0.0",
   "description": "Test server for Google Speech API implementation",
-  "main": "app.js",
+  "main": "todoApp.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node avatar.js",
     "deploy": "gcloud app deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

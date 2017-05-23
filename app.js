@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req,res){
   //Send html file
   console.log("Sending html to client");
-  res.status(200).sendFile(path.join(__dirname, 'index.html'));''
+  res.status(200).sendFile(path.join(__dirname, 'index.html'));
 
   //Default response from server
   //res.status(200).send("Default response from SpeechNode!");
