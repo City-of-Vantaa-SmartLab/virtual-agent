@@ -1,14 +1,14 @@
 {
-  "name": "speechnode",
+  "name": "virtual-agent",
   "version": "1.0.0",
-  "description": "Test server for Google Speech API implementation",
-  "main": "todoApp.js",
+  "description": "Virtual Agent for Muuntamo",
+  "main": "avatar.js",
   "scripts": {
     "start": "node avatar.js",
     "deploy": "gcloud app deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Santeri Saarinen",
+  "author": "Hans Hokka",
   "license": "ISC",
   "dependencies":{
     "express":"^4.13.4",
