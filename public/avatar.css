@@ -1,5 +1,5 @@
 div {
-    width: 930px;
+    width: 600px;
     font-size: larger;
 }
 
@@ -11,6 +11,13 @@ div {
     background-size: 75%;
 }
 
+#avatarAnimation{
+    color: black;
+    height: 600px;
+    border: 2px solid black;
+    background: url("./kani.gif") no-repeat center;
+    background-size: 75%;
+}
 #avatarOutput {
     color: green;
     height: 100px;

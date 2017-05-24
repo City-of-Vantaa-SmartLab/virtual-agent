@@ -24,12 +24,12 @@
     // api ---------------------------------------------------------------------
     // get all todos
     app.get('/app/', function(req, res) {
-        res.send('backend->frontend');
+        res.send('get');
     });
 
     // create todo and send back all todos after creation
     app.post('/app/', function(req, res) {
-        res.send('frontend->backend');
+        res.send('post');
     });
 
 // application -------------------------------------------------------------
