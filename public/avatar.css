@@ -1,0 +1,27 @@
+div {
+    width: 930px;
+    font-size: larger;
+}
+
+#avatarImage {
+    color: red;
+    height: 600px;
+    border: 2px solid red;
+    background: url("./layer-1.png") no-repeat center;
+    background-size: 75%;
+}
+
+#avatarOutput {
+    color: green;
+    height: 100px;
+    border: 2px solid green;
+}
+
+#avatarInput {
+    background: yellow;
+    border: 2px solid yellow;
+}
+
+#avatarInputButton {
+    color: blue;
+}

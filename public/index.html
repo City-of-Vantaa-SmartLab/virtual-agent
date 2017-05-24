@@ -1,24 +1,20 @@
 <!doctype html>
-<html ng-app="todoApp">
+<html ng-app="virtualAgentApp">
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="avatar.js"></script>
-    <link rel="stylesheet" href="avatar.css"> </head>
+    <script src="./avatar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./avatar.css"> </head>
 
 <body>
     <div ng-controller="AvatarController as avatarElements">
-        <div id="avatarImage">
-            <span>{{avatarElements.avatarImage()}}</span>
-        </div>
-        <div id="testing">
-        </div>
-        <div id="avatarOutput">
-            <span>{{avatarElements.output()}}</span>
-        </div>
-        <div id="avatarInput">
-            Speech Input (now with text!): <input ng-model="speechIn">
-<h1>You said: {{speechIn}}</h1>
+        <div id="avatarImage"> <span>{{avatarElements.avatarImage()}}</span> </div>
+        <div id="testing"> </div>
+        <div id="avatarOutput"> <span>Response from app.js: {{up}} <br><br>Response from avatar.js: {{avatarElements.output()}}</span> </div>
+        <div id="avatarInput"> Speech Input (now with text!):
+            <input ng-model="speechIn">
+            <h1>You said: {{speechIn}}</h1>
         </div>
     </div>
 </body>
