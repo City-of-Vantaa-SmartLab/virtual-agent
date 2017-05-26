@@ -41,6 +41,6 @@ app.get('*', function (req, res) {
 io.on('connection', function (socket) {
     console.log("User connected");
     socket.on('red', function(){
-        socket.emit("response", "Tänään ohjelmassa sitä sun tätä");
+        socket.emit("response", "Terveisiä backendistä");
     });
 });

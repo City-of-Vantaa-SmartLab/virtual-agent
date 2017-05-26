@@ -1,4 +1,56 @@
 angular.module('virtualAgentApp', []).controller('AvatarController', function ($scope, $http) {
+    function upgrade() {
+        alert('Please use Google Chrome for best experience');
+    }
+    window.onload = function () {
+        if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) {
+            upgrade();
+        }
+        else {
+            var recognizing;
+
+            function reset() {
+                console.log("Reset Recognizer");
+                recognizing = false;
+            }
+            var speech = new webkitSpeechRecognition() || speechRecognition();
+            var final_transcript = '';
+            speech.continuous = true;
+            speech.interimResults = true;
+            speech.lang = 'fi'; // check google web speech example source for more lanuages
+            speech.start(); //enables recognition on default
+            speech.onstart = function () {
+                // When recognition begins
+                recognizing = true;
+                alert("recognizing");
+            };
+            speech.onresult = function (event) {
+                var interim_transcript = '';
+                
+                console.log("Got results!");
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        final_transcript += event.results[i][0].transcript;
+                    }
+                    else {
+                        interim_transcript += event.results[i][0].transcript;
+                    }
+                }
+                
+                
+            };
+            speech.onerror = function (event) {
+                // Either 'No-speech' or 'Network connection error'
+                console.error(event.error);
+            };
+            speech.onend = function () {
+                // When recognition ends
+                speakBack(final_transcript);
+                console.log(final_transcript);
+                reset();
+            };
+        }
+    };
     var avatarElements = this;
     var socket = io.connect('http://localhost');
     avatarElements.main = function () {
@@ -22,7 +74,6 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
         }
         if ($scope.speechIn == "green") {
             greenAnimation();
-            responsiveVoice.speak("ymmärsin, mitä tarkoitat", "Finnish Female");
             $scope.speechIn = "";
         }
         if ($scope.speechIn == "white") {
@@ -55,10 +106,15 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     function greenAnimation() {
         $('#avatarAnimation').css('background', 'url("./green.gif") no-repeat center');
         $('#avatarAnimation').css('background-size', '100% auto');
+        responsiveVoice.speak("ymmärsin, mitä tarkoitat", "Finnish Female");
     }
 
     function whiteAnimation() {
         $('#avatarAnimation').css('background', 'url("./white.gif") no-repeat center');
         $('#avatarAnimation').css('background-size', '100% auto');
+    }
+
+    function speakBack(data) {
+        responsiveVoice.speak(("ymmärsin, mitä tarkoitat. Tarkoitit: " + data), "Finnish Female");
     }
 });
