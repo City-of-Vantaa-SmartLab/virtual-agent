@@ -22,12 +22,10 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
             speech.onstart = function () {
                 // When recognition begins
                 recognizing = true;
-                alert("recognizing");
+                redAnimation();
             };
             speech.onresult = function (event) {
                 var interim_transcript = '';
-                
-                console.log("Got results!");
                 for (var i = event.resultIndex; i < event.results.length; ++i) {
                     if (event.results[i].isFinal) {
                         final_transcript += event.results[i][0].transcript;
@@ -36,8 +34,10 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
                         interim_transcript += event.results[i][0].transcript;
                     }
                 }
-                
-                
+                if (final_transcript != "") {
+                    blueAnimation();
+                    speakBack(final_transcript);
+                }
             };
             speech.onerror = function (event) {
                 // Either 'No-speech' or 'Network connection error'
@@ -45,8 +45,6 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
             };
             speech.onend = function () {
                 // When recognition ends
-                speakBack(final_transcript);
-                console.log(final_transcript);
                 reset();
             };
         }
@@ -115,6 +113,12 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     }
 
     function speakBack(data) {
-        responsiveVoice.speak(("ymmärsin, mitä tarkoitat. Tarkoitit: " + data), "Finnish Female");
+        redAnimation();
+        socket.emit(data);
+        socket.on("response", function (msg) {
+            console.log(msg);
+            responsiveVoice.speak(msg, "Finnish Female");
+        });
+        $scope.speechIn = "";
     }
 });

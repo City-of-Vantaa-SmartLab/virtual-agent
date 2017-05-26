@@ -40,7 +40,7 @@ app.get('*', function (req, res) {
 //Start application logic after connection established
 io.on('connection', function (socket) {
     console.log("User connected");
-    socket.on('red', function(){
-        socket.emit("response", "Terveisiä backendistä");
+    socket.on('testing', function(){
+        socket.emit("response", "Kuulin kyllä");
     });
 });
