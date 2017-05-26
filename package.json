@@ -1,20 +1,14 @@
 {
-  "name": "speechnode",
-  "version": "1.0.0",
-  "description": "Test server for Google Speech API implementation",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "deploy": "gcloud app deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Santeri Saarinen",
-  "license": "ISC",
-  "dependencies":{
-    "express":"^4.13.4",
-    "express-session":"^1.15.0",
-    "fs-extra":"^2.1.2",
-    "socket.io":"^1.7.0",
-    "@google-cloud/speech":"^0.9.0"
-  }
+  "name"         : "VirtualAgent",
+  "version"      : "0.0.0",
+  "description"  : "Virtual Agent for Muuntamo",
+  "main"         : "app.js",
+  "author"       : "hhokka",
+  "dependencies" : {
+    "express"    : "~4.7.2",
+    "mongoose"   : "~3.6.2",
+    "morgan"     : "~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2"
+    }
 }

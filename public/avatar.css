@@ -1,0 +1,18 @@
+div {
+    width: 900px;
+    font-size: larger;
+}
+
+#avatarAnimation{
+    color: black;
+    height: 800px;
+    border: 2px solid black;
+    background: url("./kani.gif") no-repeat center;
+    background-size: 100% auto;
+}
+
+#avatarInput {
+    background: yellow;
+    border: 2px solid yellow;
+    height: 50px;
+}

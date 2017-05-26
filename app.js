@@ -1,54 +1,43 @@
-'use strict';
+// app.js
 
-//Import Express module
-var express = require('express');
-//Import path module (packaged with Node.js)
-var path = require('path');
-//Import fs-extra
-var fse = require('fs-extra');
-//Import Socket.IO
-var io = require('socket.io');
-//Import express-session
-var session = require('express-session');
+    // set up ========================
+    var express  = require('express');
+    var app      = express();                               // create our app w/ express
+    var mongoose = require('mongoose');                     // mongoose for mongodb
+    var morgan = require('morgan');             // log requests to the console (express4)
+    var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
+    var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
-//Create new instance of Express
-var app = express();
+    // configuration =================
 
-//Import server side file for avatar app
-var avatarApp = require('./avatar');
+   
+    app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
+    app.use(morgan('dev'));                                         // log every request to the console
+    app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
+    app.use(bodyParser.json());                                     // parse application/json
+    app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
+    app.use(methodOverride());
 
+    
+    // routes ======================================================================
 
-//Session setup
-app.use(session({secret: 'secret', key: 'express.sid'}));
-/*app.use(function(req, res){
-  //res.end('<h2>Hello, your session id is ' + req.sessionID + '</h2>');
-});*/
+    // api ---------------------------------------------------------------------
+    // get all todos
+    app.get('/app/', function(req, res) {
+        res.send('get');
+    });
 
-//Serve static html page from public directory
-app.use(express.static(path.join(__dirname, 'public')));
+    // create todo and send back all todos after creation
+    app.post('/app/', function(req, res) {
+        res.send('post');
+    });
 
-//Set response to all GET calls
-app.get('/', function(req,res){
-  //Send html file
-  console.log("Sending html to client");
-  res.status(200).sendFile(path.join(__dirname, 'index.html'));''
-
-  //Default response from server
-  //res.status(200).send("Default response from SpeechNode!");
-});
-
-//Set up http server and listen to port 8080
-var server = require('http').createServer(app).listen(process.env.PORT || '8080', function(){
-  console.log('App listening on port %s', server.address().port);
-  console.log('Press Ctrl+C to quit');
-})
-//Set socket.IO to listen to http server
-var socketio = io.listen(server);
+// application -------------------------------------------------------------
+    app.get('*', function(req, res) {
+            res.sendfile('./public/index.html'); // load our public/index.html file
+        });
+    // listen (start app with node app.js) ======================================
+    app.listen(8080);
+    console.log("App listening on port 8080");
 
 
-//Listen to Socket.IO connections.
-//Start application logic after connection established
-socketio.on('connection', function(socket){
-  console.log("Socket connection ready");
-  avatarApp.initApp();
-});
