@@ -1,0 +1,396 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'remove',
+1 verbose cli   '--save',
+1 verbose cli   '@ng-bootstrap/ng-bootstrap' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly uninstall loadAllDepsIntoIdealtree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly loadIdealTree Finishing
+21 silly currentTree VirtualAgent@0.0.0
+21 silly currentTree +-- @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26
+21 silly currentTree +-- accepts@1.0.7
+21 silly currentTree +-- after@0.8.2
+21 silly currentTree +-- arraybuffer.slice@0.0.6
+21 silly currentTree +-- async@2.1.4
+21 silly currentTree +-- backo2@1.0.2
+21 silly currentTree +-- base64-arraybuffer@0.1.5
+21 silly currentTree +-- base64id@1.0.0
+21 silly currentTree +-- basic-auth@1.0.0
+21 silly currentTree +-- better-assert@1.0.2
+21 silly currentTree +-- blob@0.0.4
+21 silly currentTree +-- bluebird@2.10.2
+21 silly currentTree +-- body-parser@1.5.2
+21 silly currentTree +-- bson@0.2.2
+21 silly currentTree +-- buffer-crc32@0.2.3
+21 silly currentTree +-- buffer-shims@1.0.0
+21 silly currentTree +-- bytes@1.0.0
+21 silly currentTree +-- callsite@1.0.0
+21 silly currentTree +-- component-bind@1.0.0
+21 silly currentTree +-- component-emitter@1.2.1
+21 silly currentTree +-- component-inherit@0.0.3
+21 silly currentTree +-- connect@1.9.2
+21 silly currentTree +-- cookie-signature@1.0.4
+21 silly currentTree +-- cookie@0.1.2
+21 silly currentTree +-- core-util-is@1.0.2
+21 silly currentTree +-- crc@3.4.4
+21 silly currentTree +-- debug@1.0.4
+21 silly currentTree +-- depd@0.4.4
+21 silly currentTree +-- ee-first@1.0.3
+21 silly currentTree +-- engine.io-client@3.1.1
+21 silly currentTree | +-- debug@2.6.8
+21 silly currentTree | `-- ms@2.0.0
+21 silly currentTree +-- engine.io-parser@2.1.1
+21 silly currentTree +-- engine.io@3.1.0
+21 silly currentTree | +-- accepts@1.3.3
+21 silly currentTree | +-- cookie@0.3.1
+21 silly currentTree | +-- debug@2.6.8
+21 silly currentTree | +-- mime-types@2.1.15
+21 silly currentTree | +-- ms@2.0.0
+21 silly currentTree | `-- negotiator@0.6.1
+21 silly currentTree +-- es6-promise@3.2.1
+21 silly currentTree +-- escape-html@1.0.1
+21 silly currentTree +-- express-session@1.15.3
+21 silly currentTree | +-- cookie-signature@1.0.6
+21 silly currentTree | +-- cookie@0.3.1
+21 silly currentTree | +-- debug@2.6.7
+21 silly currentTree | +-- depd@1.1.0
+21 silly currentTree | +-- ms@2.0.0
+21 silly currentTree | `-- parseurl@1.3.1
+21 silly currentTree +-- express-sessions@1.0.6
+21 silly currentTree | +-- bson@1.0.4
+21 silly currentTree | +-- express@2.5.11
+21 silly currentTree | +-- mime@1.2.4
+21 silly currentTree | +-- mongodb@2.2.26
+21 silly currentTree | +-- mongoose@4.10.2
+21 silly currentTree | +-- mpath@0.2.1
+21 silly currentTree | +-- mpromise@0.5.5
+21 silly currentTree | +-- ms@2.0.0
+21 silly currentTree | +-- muri@1.2.1
+21 silly currentTree | +-- qs@0.4.2
+21 silly currentTree | `-- sliced@1.0.1
+21 silly currentTree +-- express@4.7.4
+21 silly currentTree +-- finalhandler@0.1.0
+21 silly currentTree +-- finished@1.2.2
+21 silly currentTree +-- formidable@1.0.17
+21 silly currentTree +-- fresh@0.2.2
+21 silly currentTree +-- has-binary2@1.0.2
+21 silly currentTree +-- has-cors@1.1.0
+21 silly currentTree +-- hooks-fixed@2.0.0
+21 silly currentTree +-- hooks@0.2.1
+21 silly currentTree +-- iconv-lite@0.4.4
+21 silly currentTree +-- indexof@0.0.1
+21 silly currentTree +-- inherits@2.0.3
+21 silly currentTree +-- ipaddr.js@0.1.2
+21 silly currentTree +-- isarray@2.0.1
+21 silly currentTree +-- kareem@1.4.1
+21 silly currentTree +-- kerberos@0.0.3
+21 silly currentTree +-- lodash@4.17.4
+21 silly currentTree +-- media-typer@0.2.0
+21 silly currentTree +-- merge-descriptors@0.0.2
+21 silly currentTree +-- method-override@2.1.3
+21 silly currentTree | +-- parseurl@1.3.1
+21 silly currentTree | `-- vary@1.0.1
+21 silly currentTree +-- methods@1.1.0
+21 silly currentTree +-- mime-db@1.27.0
+21 silly currentTree +-- mime-types@1.0.2
+21 silly currentTree +-- mime@1.2.11
+21 silly currentTree +-- mkdirp@0.3.0
+21 silly currentTree +-- mongodb-core@2.1.10
+21 silly currentTree | `-- bson@1.0.4
+21 silly currentTree +-- mongodb@1.3.19
+21 silly currentTree +-- mongoose@3.6.20
+21 silly currentTree | `-- ms@0.1.0
+21 silly currentTree +-- morgan@1.2.3
+21 silly currentTree +-- mpath@0.1.1
+21 silly currentTree +-- mpromise@0.2.1
+21 silly currentTree | `-- sliced@0.0.4
+21 silly currentTree +-- mquery@2.3.1
+21 silly currentTree | +-- debug@2.6.8
+21 silly currentTree | `-- ms@2.0.0
+21 silly currentTree +-- ms@0.6.2
+21 silly currentTree +-- muri@0.3.1
+21 silly currentTree +-- negotiator@0.4.7
+21 silly currentTree +-- object-assign@4.1.1
+21 silly currentTree +-- object-component@0.0.3
+21 silly currentTree +-- on-finished@2.1.0
+21 silly currentTree | `-- ee-first@1.0.5
+21 silly currentTree +-- on-headers@1.0.1
+21 silly currentTree +-- parsejson@0.0.3
+21 silly currentTree +-- parseqs@0.0.5
+21 silly currentTree +-- parseuri@0.0.5
+21 silly currentTree +-- parseurl@1.2.0
+21 silly currentTree +-- path-to-regexp@0.1.3
+21 silly currentTree +-- process-nextick-args@1.0.7
+21 silly currentTree +-- proxy-addr@1.0.1
+21 silly currentTree +-- qs@0.6.6
+21 silly currentTree +-- random-bytes@1.0.0
+21 silly currentTree +-- range-parser@1.0.0
+21 silly currentTree +-- raw-body@1.3.0
+21 silly currentTree +-- readable-stream@2.2.7
+21 silly currentTree | `-- isarray@1.0.0
+21 silly currentTree +-- redis@0.12.1
+21 silly currentTree +-- regexp-clone@0.0.1
+21 silly currentTree +-- require_optional@1.0.0
+21 silly currentTree +-- resolve-from@2.0.0
+21 silly currentTree +-- safe-buffer@5.0.1
+21 silly currentTree +-- semver@5.3.0
+21 silly currentTree +-- send@0.7.4
+21 silly currentTree +-- serve-static@1.4.4
+21 silly currentTree +-- sliced@0.0.5
+21 silly currentTree +-- socket.io-adapter@1.1.0
+21 silly currentTree | +-- debug@2.3.3
+21 silly currentTree | `-- ms@0.7.2
+21 silly currentTree +-- socket.io-client@2.0.1
+21 silly currentTree | +-- debug@2.6.4
+21 silly currentTree | `-- ms@0.7.3
+21 silly currentTree +-- socket.io-parser@3.1.2
+21 silly currentTree | +-- debug@2.6.8
+21 silly currentTree | `-- ms@2.0.0
+21 silly currentTree +-- socket.io@2.0.1
+21 silly currentTree | +-- debug@2.6.8
+21 silly currentTree | `-- ms@2.0.0
+21 silly currentTree +-- string_decoder@1.0.1
+21 silly currentTree +-- to-array@0.1.4
+21 silly currentTree +-- type-is@1.3.2
+21 silly currentTree +-- uid-safe@2.1.4
+21 silly currentTree +-- ultron@1.1.0
+21 silly currentTree +-- util-deprecate@1.0.2
+21 silly currentTree +-- utils-merge@1.0.0
+21 silly currentTree +-- uws@0.14.5
+21 silly currentTree +-- vary@0.1.0
+21 silly currentTree +-- ws@2.3.1
+21 silly currentTree +-- xmlhttprequest-ssl@1.5.3
+21 silly currentTree `-- yeast@0.1.2
+22 silly idealTree VirtualAgent@0.0.0
+22 silly idealTree +-- accepts@1.0.7
+22 silly idealTree +-- after@0.8.2
+22 silly idealTree +-- arraybuffer.slice@0.0.6
+22 silly idealTree +-- async@2.1.4
+22 silly idealTree +-- backo2@1.0.2
+22 silly idealTree +-- base64-arraybuffer@0.1.5
+22 silly idealTree +-- base64id@1.0.0
+22 silly idealTree +-- basic-auth@1.0.0
+22 silly idealTree +-- better-assert@1.0.2
+22 silly idealTree +-- blob@0.0.4
+22 silly idealTree +-- bluebird@2.10.2
+22 silly idealTree +-- body-parser@1.5.2
+22 silly idealTree +-- bson@0.2.2
+22 silly idealTree +-- buffer-crc32@0.2.3
+22 silly idealTree +-- buffer-shims@1.0.0
+22 silly idealTree +-- bytes@1.0.0
+22 silly idealTree +-- callsite@1.0.0
+22 silly idealTree +-- component-bind@1.0.0
+22 silly idealTree +-- component-emitter@1.2.1
+22 silly idealTree +-- component-inherit@0.0.3
+22 silly idealTree +-- connect@1.9.2
+22 silly idealTree +-- cookie-signature@1.0.4
+22 silly idealTree +-- cookie@0.1.2
+22 silly idealTree +-- core-util-is@1.0.2
+22 silly idealTree +-- crc@3.4.4
+22 silly idealTree +-- debug@1.0.4
+22 silly idealTree +-- depd@0.4.4
+22 silly idealTree +-- ee-first@1.0.3
+22 silly idealTree +-- engine.io-client@3.1.1
+22 silly idealTree | +-- debug@2.6.8
+22 silly idealTree | `-- ms@2.0.0
+22 silly idealTree +-- engine.io-parser@2.1.1
+22 silly idealTree +-- engine.io@3.1.0
+22 silly idealTree | +-- accepts@1.3.3
+22 silly idealTree | +-- cookie@0.3.1
+22 silly idealTree | +-- debug@2.6.8
+22 silly idealTree | +-- mime-types@2.1.15
+22 silly idealTree | +-- ms@2.0.0
+22 silly idealTree | `-- negotiator@0.6.1
+22 silly idealTree +-- es6-promise@3.2.1
+22 silly idealTree +-- escape-html@1.0.1
+22 silly idealTree +-- express-session@1.15.3
+22 silly idealTree | +-- cookie-signature@1.0.6
+22 silly idealTree | +-- cookie@0.3.1
+22 silly idealTree | +-- debug@2.6.7
+22 silly idealTree | +-- depd@1.1.0
+22 silly idealTree | +-- ms@2.0.0
+22 silly idealTree | `-- parseurl@1.3.1
+22 silly idealTree +-- express-sessions@1.0.6
+22 silly idealTree | +-- bson@1.0.4
+22 silly idealTree | +-- express@2.5.11
+22 silly idealTree | +-- mime@1.2.4
+22 silly idealTree | +-- mongodb@2.2.26
+22 silly idealTree | +-- mongoose@4.10.2
+22 silly idealTree | +-- mpath@0.2.1
+22 silly idealTree | +-- mpromise@0.5.5
+22 silly idealTree | +-- ms@2.0.0
+22 silly idealTree | +-- muri@1.2.1
+22 silly idealTree | +-- qs@0.4.2
+22 silly idealTree | `-- sliced@1.0.1
+22 silly idealTree +-- express@4.7.4
+22 silly idealTree +-- finalhandler@0.1.0
+22 silly idealTree +-- finished@1.2.2
+22 silly idealTree +-- formidable@1.0.17
+22 silly idealTree +-- fresh@0.2.2
+22 silly idealTree +-- has-binary2@1.0.2
+22 silly idealTree +-- has-cors@1.1.0
+22 silly idealTree +-- hooks-fixed@2.0.0
+22 silly idealTree +-- hooks@0.2.1
+22 silly idealTree +-- iconv-lite@0.4.4
+22 silly idealTree +-- indexof@0.0.1
+22 silly idealTree +-- inherits@2.0.3
+22 silly idealTree +-- ipaddr.js@0.1.2
+22 silly idealTree +-- isarray@2.0.1
+22 silly idealTree +-- kareem@1.4.1
+22 silly idealTree +-- kerberos@0.0.3
+22 silly idealTree +-- lodash@4.17.4
+22 silly idealTree +-- media-typer@0.2.0
+22 silly idealTree +-- merge-descriptors@0.0.2
+22 silly idealTree +-- method-override@2.1.3
+22 silly idealTree | +-- parseurl@1.3.1
+22 silly idealTree | `-- vary@1.0.1
+22 silly idealTree +-- methods@1.1.0
+22 silly idealTree +-- mime-db@1.27.0
+22 silly idealTree +-- mime-types@1.0.2
+22 silly idealTree +-- mime@1.2.11
+22 silly idealTree +-- mkdirp@0.3.0
+22 silly idealTree +-- mongodb-core@2.1.10
+22 silly idealTree | `-- bson@1.0.4
+22 silly idealTree +-- mongodb@1.3.19
+22 silly idealTree +-- mongoose@3.6.20
+22 silly idealTree | `-- ms@0.1.0
+22 silly idealTree +-- morgan@1.2.3
+22 silly idealTree +-- mpath@0.1.1
+22 silly idealTree +-- mpromise@0.2.1
+22 silly idealTree | `-- sliced@0.0.4
+22 silly idealTree +-- mquery@2.3.1
+22 silly idealTree | +-- debug@2.6.8
+22 silly idealTree | `-- ms@2.0.0
+22 silly idealTree +-- ms@0.6.2
+22 silly idealTree +-- muri@0.3.1
+22 silly idealTree +-- negotiator@0.4.7
+22 silly idealTree +-- object-assign@4.1.1
+22 silly idealTree +-- object-component@0.0.3
+22 silly idealTree +-- on-finished@2.1.0
+22 silly idealTree | `-- ee-first@1.0.5
+22 silly idealTree +-- on-headers@1.0.1
+22 silly idealTree +-- parsejson@0.0.3
+22 silly idealTree +-- parseqs@0.0.5
+22 silly idealTree +-- parseuri@0.0.5
+22 silly idealTree +-- parseurl@1.2.0
+22 silly idealTree +-- path-to-regexp@0.1.3
+22 silly idealTree +-- process-nextick-args@1.0.7
+22 silly idealTree +-- proxy-addr@1.0.1
+22 silly idealTree +-- qs@0.6.6
+22 silly idealTree +-- random-bytes@1.0.0
+22 silly idealTree +-- range-parser@1.0.0
+22 silly idealTree +-- raw-body@1.3.0
+22 silly idealTree +-- readable-stream@2.2.7
+22 silly idealTree | `-- isarray@1.0.0
+22 silly idealTree +-- redis@0.12.1
+22 silly idealTree +-- regexp-clone@0.0.1
+22 silly idealTree +-- require_optional@1.0.0
+22 silly idealTree +-- resolve-from@2.0.0
+22 silly idealTree +-- safe-buffer@5.0.1
+22 silly idealTree +-- semver@5.3.0
+22 silly idealTree +-- send@0.7.4
+22 silly idealTree +-- serve-static@1.4.4
+22 silly idealTree +-- sliced@0.0.5
+22 silly idealTree +-- socket.io-adapter@1.1.0
+22 silly idealTree | +-- debug@2.3.3
+22 silly idealTree | `-- ms@0.7.2
+22 silly idealTree +-- socket.io-client@2.0.1
+22 silly idealTree | +-- debug@2.6.4
+22 silly idealTree | `-- ms@0.7.3
+22 silly idealTree +-- socket.io-parser@3.1.2
+22 silly idealTree | +-- debug@2.6.8
+22 silly idealTree | `-- ms@2.0.0
+22 silly idealTree +-- socket.io@2.0.1
+22 silly idealTree | +-- debug@2.6.8
+22 silly idealTree | `-- ms@2.0.0
+22 silly idealTree +-- string_decoder@1.0.1
+22 silly idealTree +-- to-array@0.1.4
+22 silly idealTree +-- type-is@1.3.2
+22 silly idealTree +-- uid-safe@2.1.4
+22 silly idealTree +-- ultron@1.1.0
+22 silly idealTree +-- util-deprecate@1.0.2
+22 silly idealTree +-- utils-merge@1.0.0
+22 silly idealTree +-- uws@0.14.5
+22 silly idealTree +-- vary@0.1.0
+22 silly idealTree +-- ws@2.3.1
+22 silly idealTree +-- xmlhttprequest-ssl@1.5.3
+22 silly idealTree `-- yeast@0.1.2
+23 silly generateActionsToTake Starting
+24 silly install generateActionsToTake
+25 silly generateActionsToTake Finishing
+26 silly diffTrees action count 1
+27 silly diffTrees remove @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26
+28 silly decomposeActions action count 1
+29 silly decomposeActions remove @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26
+30 silly runTopLevelLifecycles Starting
+31 silly executeActions Starting
+32 silly install executeActions
+33 silly doSerial global-install 0
+34 silly doParallel fetch 0
+35 verbose correctMkdir C:\Users\hansh\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+36 verbose lock using C:\Users\hansh\AppData\Roaming\npm-cache\_locks\staging-4df0f86e1383b42e.lock for C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\.staging
+37 silly doParallel extract 0
+38 silly doParallel preinstall 0
+39 silly doReverseSerial remove 1
+40 silly remove C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap
+41 verbose unbuild node_modules\@ng-bootstrap\ng-bootstrap
+42 info lifecycle @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26~preuninstall: @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26
+43 silly lifecycle @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26~preuninstall: no script for preuninstall, continuing
+44 info lifecycle @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26~uninstall: @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26
+45 silly lifecycle @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26~uninstall: no script for uninstall, continuing
+46 verbose unbuild rmStuff @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26 from C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules
+47 info lifecycle @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26~postuninstall: @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26
+48 silly lifecycle @ng-bootstrap/ng-bootstrap@1.0.0-alpha.26~postuninstall: no script for postuninstall, continuing
+49 silly gentlyRm C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap is being purged from base C:\Users\hansh\Google Drive\smartlab\virtual-agent
+50 verbose gentlyRm don't care about contents; nuking C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap
+51 silly vacuum-fs purging C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap
+52 verbose unlock done using C:\Users\hansh\AppData\Roaming\npm-cache\_locks\staging-4df0f86e1383b42e.lock for C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\.staging
+53 silly rollbackFailedOptional Starting
+54 silly rollbackFailedOptional Finishing
+55 silly runTopLevelLifecycles Finishing
+56 silly install printInstalled
+57 warn VirtualAgent@0.0.0 No repository field.
+58 verbose If you need help, you may report this error at:
+58 verbose     <https://github.com/npm/npm/issues>
+59 warn VirtualAgent@0.0.0 No license field.
+60 verbose If you need help, you may report this error at:
+60 verbose     <https://github.com/npm/npm/issues>
+61 verbose stack Error: EPERM: operation not permitted, unlink 'C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap\datepicker\datepicker-config.d.ts'
+61 verbose stack     at Error (native)
+62 verbose cwd C:\Users\hansh\Google Drive\smartlab\virtual-agent
+63 error Windows_NT 10.0.14393
+64 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "remove" "--save" "@ng-bootstrap/ng-bootstrap"
+65 error node v6.9.1
+66 error npm  v3.10.8
+67 error path C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap\datepicker\datepicker-config.d.ts
+68 error code EPERM
+69 error errno -4048
+70 error syscall unlink
+71 error Error: EPERM: operation not permitted, unlink 'C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap\datepicker\datepicker-config.d.ts'
+71 error     at Error (native)
+71 error  { Error: EPERM: operation not permitted, unlink 'C:\Users\hansh\Google Drive\smartlab\virtual-agent\node_modules\@ng-bootstrap\ng-bootstrap\datepicker\datepicker-config.d.ts'
+71 error     at Error (native)
+71 error   errno: -4048,
+71 error   code: 'EPERM',
+71 error   syscall: 'unlink',
+71 error   path: 'C:\\Users\\hansh\\Google Drive\\smartlab\\virtual-agent\\node_modules\\@ng-bootstrap\\ng-bootstrap\\datepicker\\datepicker-config.d.ts',
+71 error   parent: 'VirtualAgent' }
+72 error Please try running this command again as root/Administrator.
+73 verbose exit [ -4048, true ]
