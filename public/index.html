@@ -5,19 +5,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="./avatar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <script src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" type="text/css" href="./avatar.css"> </head>
 
 <body>
     <div ng-controller="AvatarController as avatarElements">
-        <div id="avatarAnimation"></div>
-        <div id="avatarOutput"> </span> </div>
-        <div id="avatarInput"> Speech Input (now with text!):
-            <input ng-model="speechIn">
-        </div>
-        {{avatarElements.main()}}
-    </div>
+        <div id="box">
+            <div id="textOutput">aaa</div>
+            <div id="top"></div>
+            <div id="bubble"></div>
+            <div id="hat"> </div>
+            <div id="animation"></div>
+            <div class="toggler">
+                <div id="textInput" class="ui-widget-content ui-corner-all">
+                    <h3 class="ui-widget-header ui-corner-all">Animate</h3>
+                    <p> {{test}}</p>
+                </div>
+            </div> {{avatarElements.main()}} </div>
 </body>
 
 </html>

@@ -1,54 +1,70 @@
 angular.module('virtualAgentApp', []).controller('AvatarController', function ($scope, $http) {
+    $scope.test = "test";
+    $( function() {
+    var state = true;
+      if ( state ) {
+        $( "#textInput" ).animate({
+          backgroundColor: "#edf1f7",
+          color: "#fff",
+          width: 600
+        }, 1000 );
+      } else {
+        $( "#textInput" ).animate({
+          backgroundColor: "#c0c3c6",
+          color: "#000",
+          width: 0
+        }, 1000 );
+      }
+      state = !state;
+    });
     function upgrade() {
         alert('Please use Google Chrome for best experience');
     }
-    window.onload = function () {
-        if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) {
-            upgrade();
-        }
-        else {
-            var recognizing;
+    if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) {
+        upgrade();
+    }
+    else {
+        var recognizing;
 
-            function reset() {
-                console.log("Reset Recognizer");
-                recognizing = false;
-            }
-            var speech = new webkitSpeechRecognition() || speechRecognition();
-            var final_transcript = '';
-            speech.continuous = true;
-            speech.interimResults = true;
-            speech.lang = 'fi'; // check google web speech example source for more lanuages
-            speech.start(); //enables recognition on default
-            speech.onstart = function () {
-                // When recognition begins
-                recognizing = true;
-                redAnimation();
-            };
-            speech.onresult = function (event) {
-                var interim_transcript = '';
-                for (var i = event.resultIndex; i < event.results.length; ++i) {
-                    if (event.results[i].isFinal) {
-                        final_transcript += event.results[i][0].transcript;
-                    }
-                    else {
-                        interim_transcript += event.results[i][0].transcript;
-                    }
-                }
-                if (final_transcript != "") {
-                    blueAnimation();
-                    speakBack(final_transcript);
-                }
-            };
-            speech.onerror = function (event) {
-                // Either 'No-speech' or 'Network connection error'
-                console.error(event.error);
-            };
-            speech.onend = function () {
-                // When recognition ends
-                reset();
-            };
+        function reset() {
+            console.log("Reset Recognizer");
+            recognizing = false;
         }
-    };
+        var speech = new webkitSpeechRecognition() || speechRecognition();
+        var final_transcript = '';
+        speech.continuous = true;
+        speech.interimResults = true;
+        speech.lang = 'fi'; // check google web speech example source for more lanuages
+        speech.start(); //enables recognition on default
+        speech.onstart = function () {
+            // When recognition begins
+            recognizing = true;
+            redAnimation();
+        };
+        speech.onresult = function (event) {
+            var interim_transcript = '';
+            for (var i = event.resultIndex; i < event.results.length; ++i) {
+                if (event.results[i].isFinal) {
+                    final_transcript += event.results[i][0].transcript;
+                }
+                else {
+                    interim_transcript += event.results[i][0].transcript;
+                }
+            }
+            if (final_transcript != "") {
+                blueAnimation();
+                speakBack(final_transcript);
+            }
+        };
+        speech.onerror = function (event) {
+            // Either 'No-speech' or 'Network connection error'
+            console.error(event.error);
+        };
+        speech.onend = function () {
+            // When recognition ends
+            reset();
+        };
+    }
     var avatarElements = this;
     var socket = io.connect('http://localhost');
     avatarElements.main = function () {
