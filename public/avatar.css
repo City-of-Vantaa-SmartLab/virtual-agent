@@ -1,6 +1,7 @@
 div {
     position: fixed;
     border-radius: 15px;
+    color: black;
 }
 
 #animation {
@@ -47,16 +48,4 @@ div {
     width: 935px;
     height: 100px;
     border: 2px solid lightgrey;
-}
-
-#button {
-    padding: .5em 1em;
-    text-decoration: none;
-}
-
-#textInput h3 {
-    margin: 0;
-    padding: 0.4em;
-    text-align: center;
-    background: blue;
 }

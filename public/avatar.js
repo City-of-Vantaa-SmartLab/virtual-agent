@@ -1,22 +1,11 @@
 angular.module('virtualAgentApp', []).controller('AvatarController', function ($scope, $http) {
-    $scope.test = "test";
-    $( function() {
-    var state = true;
-      if ( state ) {
-        $( "#textInput" ).animate({
-          backgroundColor: "#edf1f7",
-          color: "#fff",
-          width: 600
-        }, 1000 );
-      } else {
-        $( "#textInput" ).animate({
-          backgroundColor: "#c0c3c6",
-          color: "#000",
-          width: 0
-        }, 1000 );
-      }
-      state = !state;
-    });
+    $scope.test = "text in put";
+    animateDiv();
+   
+    $("#textInput").hide();
+    $("#hat").click(function() {
+  $( "#textInput" ).show("slide");
+});
     function upgrade() {
         alert('Please use Google Chrome for best experience');
     }
@@ -138,3 +127,43 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
         $scope.speechIn = "";
     }
 });
+
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('#animation').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('#animation').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    
+};
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.1;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+
+}
