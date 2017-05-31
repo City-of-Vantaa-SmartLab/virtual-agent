@@ -1,4 +1,6 @@
 angular.module('virtualAgentApp', []).controller('AvatarController', function ($scope, $http) {
+    
+    responsiveVoice.speak("Hei, kuinka voin auttaa?", "Finnish Female");
     $scope.textInput = "text input";
     $scope.textOutput = "text output text output text output text output text output text output text output";
     animateDiv();
@@ -10,6 +12,8 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     });
     $("#textOutput").hide();
     $("#hat").click(function () {
+        $("#hat").addClass("bounce animated");
+        responsiveVoice.speak("tänään ohjelmassa sitä sun tätä", "Finnish Female");
         $("#textOutput").show("slide", {
             direction: "down"
         }, 1000);
@@ -65,6 +69,11 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     }
     var avatarElements = this;
     var socket = io.connect('http://localhost');
+    var socket = io.connect('https://conversation-server.eu-de.mybluemix.net/');
+    socket.on("response", function (msg) {
+        console.log(msg);
+        alert("response");
+    });
     avatarElements.main = function () {
         if ($scope.speechIn == undefined) {
             whiteAnimation();

@@ -43,6 +43,7 @@ div {
 }
 
 #hat {
+    -webkit-animation-duration: 1s;
     left: 100px;
     bottom: 100px;
     float: left;
