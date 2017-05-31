@@ -2,20 +2,20 @@ div {
     position: fixed;
     border-radius: 15px;
     color: black;
+    font-family: 'lato';
 }
 
 #animation {
-    color: black;
-    right: 20px;
+    z-index: 999;
+    right: 200px;
     bottom: 220px;
-    height: 400px;
-    width: 400px;
-    border: 2px solid lightgrey;
+    height: 200x;
+    width: 200px;
     background: url("./bunny.png") no-repeat center;
     background-size: 100% auto;
 }
 
-#textOutput {
+#textOutputBox {
     top: 5px;
     left: 50px;
     width: 400px;
@@ -24,28 +24,44 @@ div {
     border-bottom: 0px;
 }
 
+#textOutput {
+    top: 5px;
+    left: 80px;
+    width: 350px;
+    height: 570px;
+    border-bottom: 0px;
+}
+
 #bubble {
+    -webkit-animation-delay: 2s;
     right: 20px;
     top: 20px;
-    width: 200px;
-    height: 200px;
-    border: 2px solid lightgrey;
-    background: url("./bubble.png") no-repeat center;
+    width: 400px;
+    height: 400px;
+    background: url("./thinkingBubble.png") no-repeat center;
+    background-size: 100% auto;
 }
 
 #hat {
-    left: 170px;
-    bottom: 220px;
+    left: 100px;
+    bottom: 100px;
     float: left;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     background: url("./hat.png") no-repeat center;
+    background-size: 100% auto;
 }
 
-#textInput {
+#textInputBox {
     bottom: 5px;
     left: 5px;
     width: 935px;
     height: 100px;
     border: 2px solid lightgrey;
+}
+
+#textInput {
+    left: 20px;
+    height: 50px;
+    width: 800px;
 }

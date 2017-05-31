@@ -6,6 +6,7 @@
   "author": "hhokka",
   "dependencies": {
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.26",
+    "animate.css": "^3.5.2",
     "body-parser": "~1.5.2",
     "express": "~4.7.2",
     "method-override": "~2.1.2",

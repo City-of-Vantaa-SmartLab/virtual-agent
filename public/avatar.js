@@ -1,11 +1,20 @@
 angular.module('virtualAgentApp', []).controller('AvatarController', function ($scope, $http) {
-    $scope.test = "text in put";
+    $scope.textInput = "text input";
+    $scope.textOutput = "text output text output text output text output text output text output text output";
     animateDiv();
-   
     $("#textInput").hide();
-    $("#hat").click(function() {
-  $( "#textInput" ).show("slide");
-});
+    $("#hat").click(function () {
+        $("#textInput").show("slide", {
+            direction: "right"
+        }, 1000);
+    });
+    $("#textOutput").hide();
+    $("#hat").click(function () {
+        $("#textOutput").show("slide", {
+            direction: "down"
+        }, 1000);
+    });
+
     function upgrade() {
         alert('Please use Google Chrome for best experience');
     }
@@ -128,42 +137,32 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     }
 });
 
-
-function makeNewPosition(){
-    
+function makeNewPosition() {
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
+    var h = 150;
+    var w = 200;
+    var nh = Math.floor(Math.random() * h) + 300;
+    var nw = Math.floor(Math.random() * w) + 500;
+    return [nh, nw];
 }
 
-function animateDiv(){
+function animateDiv() {
     var newq = makeNewPosition();
     var oldq = $('#animation').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
-    
-    $('#animation').animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv();        
+    $('#animation').animate({
+        top: newq[0]
+        , left: newq[1]
+    }, speed, function () {
+        animateDiv();
     });
-    
 };
 
 function calcSpeed(prev, next) {
-    
     var x = Math.abs(prev[1] - next[1]);
     var y = Math.abs(prev[0] - next[0]);
-    
     var greatest = x > y ? x : y;
-    
     var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
+    var speed = Math.ceil(greatest / speedModifier);
     return speed;
-
 }

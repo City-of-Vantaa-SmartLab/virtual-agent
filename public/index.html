@@ -10,19 +10,23 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <script src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" type="text/css" href="./avatar.css"> </head>
+    <link rel="stylesheet" type="text/css" href="./avatar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> </head>
 
 <body>
     <div ng-controller="AvatarController as ac">
         <div id="box">
+            <div id="textOutputBox">
             <div id="textOutput">
-                <h1>{{test}}</h1></div>
+                <h1>{{textOutput}}</h1></div></div>
             <div id="top"></div>
-            <div id="bubble"></div>
-            <div id="hat"> </div>
+            <div class="animated infinite pulse" id="bubble"></div>
+            <div class="infinite bounce" id="hat"> </div>
             <div id="animation"></div>
-            <div id="textInput">
-                <h1> {{test}}</h1></div>
+            <div id="textInputBox">
+                <div id="textInput">
+                    <h1> {{textInput}}</h1></div>
+            </div>
         </div>
     </div>
 </body>
