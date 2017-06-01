@@ -12,6 +12,7 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     });
     $("#textOutput").hide();
     $("#hat").click(function () {
+        socket.emit("hatClicked");
         $("#hat").addClass("bounce animated");
         responsiveVoice.speak("tänään ohjelmassa sitä sun tätä", "Finnish Female");
         $("#textOutput").show("slide", {
@@ -69,10 +70,18 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     }
     var avatarElements = this;
     var socket = io.connect('http://localhost');
-    var socket = io.connect('https://conversation-server.eu-de.mybluemix.net/');
-    socket.on("response", function (msg) {
+    var socket = io.connect('https://conversation-server.eu-de.mybluemix.net');
+    socket.on("fromWatson", function (msg) {
         console.log(msg);
-        alert("response");
+        alert(msg);
+    });
+    socket.on("connection", function (msg) {
+        console.log("connection");
+        alert("connection");
+    });
+    socket.on("disconnect", function (msg) {
+        console.log("disconnect");
+        alert("disconnect");
     });
     avatarElements.main = function () {
         if ($scope.speechIn == undefined) {
