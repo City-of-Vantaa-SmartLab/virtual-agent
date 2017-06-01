@@ -5,21 +5,7 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     $scope.textOutput = "text output text output text output text output text output text output text output";
     animateDiv();
     $("#textInput").hide();
-    $("#hat").click(function () {
-        $("#textInput").show("slide", {
-            direction: "right"
-        }, 1000);
-    });
     $("#textOutput").hide();
-    $("#hat").click(function () {
-        socket.emit("hatClicked");
-        $("#hat").addClass("bounce animated");
-        responsiveVoice.speak("tänään ohjelmassa sitä sun tätä", "Finnish Female");
-        $("#textOutput").show("slide", {
-            direction: "down"
-        }, 1000);
-    });
-
     function upgrade() {
         alert('Please use Google Chrome for best experience');
     }
@@ -73,7 +59,7 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     var socket = io.connect('https://conversation-server.eu-de.mybluemix.net');
     socket.on("fromWatson", function (msg) {
         console.log(msg);
-        alert(msg);
+        $scope.textOutput = msg;
     });
     socket.on("connection", function (msg) {
         console.log("connection");
@@ -143,14 +129,24 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
         $('#avatarAnimation').css('background', 'url("./white.gif") no-repeat center');
         $('#avatarAnimation').css('background-size', '100% auto');
     }
-
+    
     function speakBack(data) {
-        redAnimation();
-        socket.emit(data);
-        socket.on("response", function (msg) {
+        redAnimation(data);
+        console.log(data);
+        socket.emit("speechIn", data);
+        socket.on("speechOut", function (msg) {
             console.log(msg);
             responsiveVoice.speak(msg, "Finnish Female");
-        });
+            $scope.textInput = data;
+            $scope.textOutput = msg;
+            $("#textOutput").show("slide", {
+            direction: "down"
+        }, 1000);
+            $scope.$apply();
+            $("#textInput").show("slide", {
+            direction: "right"
+        }, 1000);
+        });   
         $scope.speechIn = "";
     }
 });
