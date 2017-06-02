@@ -43,6 +43,7 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
             if (final_transcript != "") {
                 blueAnimation();
                 speakBack(final_transcript);
+                final_transcript = "";
             }
         };
         speech.onerror = function (event) {
@@ -146,7 +147,9 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
             $("#textInput").show("slide", {
             direction: "right"
         }, 1000);
-        });   
+        });
+        $scope.textInput = "";
+        $scope.textOutput = "";
         $scope.speechIn = "";
     }
 });

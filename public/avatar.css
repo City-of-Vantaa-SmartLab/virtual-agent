@@ -5,13 +5,16 @@ div {
     font-family: 'lato';
 }
 
+body {
+    background: url("./background_pixel.png");
+}
+
 #animation {
-    z-index: 999;
     right: 200px;
     bottom: 220px;
-    height: 200x;
-    width: 200px;
-    background: url("./bunny.png") no-repeat center;
+    height: 150x;
+    width: 150px;
+    background: url("./bunny_pixel.png") no-repeat center;
     background-size: 100% auto;
 }
 
@@ -19,9 +22,12 @@ div {
     top: 5px;
     left: 50px;
     width: 400px;
-    height: 570px;
-    border: 2px solid lightgrey;
+    height: 530px;
+    border: 2px solid white;
     border-bottom: 0px;
+     /* RGBa with 0.6 opacity */
+    background-color: rgba(255, 255, 255, 0.2);
+    
 }
 
 #textOutput {
@@ -36,20 +42,20 @@ div {
     -webkit-animation-delay: 2s;
     right: 20px;
     top: 20px;
-    width: 400px;
-    height: 400px;
-    background: url("./thinkingBubble.png") no-repeat center;
+    width: 300px;
+    height: 300px;
+    background: url("./thinkingBubble_pixel.png") no-repeat center;
     background-size: 100% auto;
 }
 
 #hat {
     -webkit-animation-duration: 1s;
     left: 100px;
-    bottom: 100px;
+    bottom: 150px;
     float: left;
     width: 300px;
     height: 300px;
-    background: url("./hat.png") no-repeat center;
+    background: url("./hat_pixel.png") no-repeat center;
     background-size: 100% auto;
 }
 
@@ -59,6 +65,7 @@ div {
     width: 935px;
     height: 100px;
     border: 2px solid lightgrey;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #textInput {
