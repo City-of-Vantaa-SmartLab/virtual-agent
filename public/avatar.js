@@ -1,11 +1,11 @@
 angular.module('virtualAgentApp', []).controller('AvatarController', function ($scope, $http) {
-    
     responsiveVoice.speak("Hei, kuinka voin auttaa?", "Finnish Female");
     $scope.textInput = "text input";
     $scope.textOutput = "text output text output text output text output text output text output text output";
     animateDiv();
     $("#textInput").hide();
     $("#textOutput").hide();
+
     function upgrade() {
         alert('Please use Google Chrome for best experience');
     }
@@ -14,11 +14,10 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
     }
     else {
         var recognizing;
-
-        function reset() {
+        /*function reset() {
             console.log("Reset Recognizer");
             recognizing = false;
-        }
+        }*/
         var speech = new webkitSpeechRecognition() || speechRecognition();
         var final_transcript = '';
         speech.continuous = true;
@@ -52,7 +51,7 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
         };
         speech.onend = function () {
             // When recognition ends
-            reset();
+            //reset();
         };
     }
     var avatarElements = this;
@@ -130,7 +129,7 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
         $('#avatarAnimation').css('background', 'url("./white.gif") no-repeat center');
         $('#avatarAnimation').css('background-size', '100% auto');
     }
-    
+
     function speakBack(data) {
         redAnimation(data);
         console.log(data);
@@ -139,14 +138,16 @@ angular.module('virtualAgentApp', []).controller('AvatarController', function ($
             console.log(msg);
             responsiveVoice.speak(msg, "Finnish Female");
             $scope.textInput = data;
+            data = "";
             $scope.textOutput = msg;
+            msg = "";
             $("#textOutput").show("slide", {
-            direction: "down"
-        }, 1000);
+                direction: "down"
+            }, 1000);
             $scope.$apply();
             $("#textInput").show("slide", {
-            direction: "right"
-        }, 1000);
+                direction: "right"
+            }, 1000);
         });
         $scope.textInput = "";
         $scope.textOutput = "";
