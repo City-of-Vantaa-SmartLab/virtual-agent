@@ -1,75 +1,86 @@
 div {
     position: fixed;
-    border-radius: 15px;
     color: black;
     font-family: 'lato';
+    font-family: 'gt_walsheim_regular';
 }
 
 body {
     background: url("./background_pixel.png");
 }
 
-#animation {
-    right: 200px;
-    bottom: 220px;
-    height: 150x;
-    width: 150px;
+#bunny {
+    right: 100px;
+    bottom: 210px;
+    height: 300px;
+    width: 300px;
     background: url("./bunny_pixel.png") no-repeat center;
-    background-size: 100% auto;
+    background-size: contain;
 }
 
 #textOutputBox {
-    top: 5px;
-    left: 50px;
-    width: 400px;
-    height: 530px;
-    border: 2px solid white;
-    border-bottom: 0px;
-     /* RGBa with 0.6 opacity */
-    background-color: rgba(255, 255, 255, 0.2);
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    height: 200px;
+    background: url("./Output-field.png");
+    background-size: 800px 200px;
+    
     
 }
 
 #textOutput {
-    top: 5px;
-    left: 80px;
+    top: 30px;
+    left: 60px;
     width: 350px;
     height: 570px;
     border-bottom: 0px;
+    font-style: italic;
+    font-size: larger;
 }
 
 #bubble {
-    -webkit-animation-delay: 2s;
-    right: 20px;
-    top: 20px;
-    width: 300px;
-    height: 300px;
-    background: url("./thinkingBubble_pixel.png") no-repeat center;
+    right: 350px;
+    top: 255px;
+    width: 230px;
+    height: 230px;
+    background: url("./bubble.png") no-repeat center;
     background-size: 100% auto;
 }
 
 #hat {
-    -webkit-animation-duration: 1s;
-    left: 100px;
-    bottom: 150px;
-    float: left;
-    width: 300px;
-    height: 300px;
+    left: 70px;
+    bottom: 500px;
+    width: 200px;
+    height: 200px;
     background: url("./hat_pixel.png") no-repeat center;
     background-size: 100% auto;
 }
 
 #textInputBox {
-    bottom: 5px;
-    left: 5px;
-    width: 935px;
-    height: 100px;
-    border: 2px solid lightgrey;
-    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    height: 130px;
+    background: url("./input-field.png") no-repeat;
+    opacity: 0.5;
+    
 }
 
 #textInput {
-    left: 20px;
+    left: 60px;
+    bottom: 120px;
     height: 50px;
     width: 800px;
+}
+
+@font-face {
+    font-family: 'gt_walsheim_regular';
+    src: url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.eot');
+    src: url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.eot"?#iefix') format('embedded-opentype'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.woff') format('woff'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.ttf') format('truetype'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.svg#gt_walsheim_regular') format('svg');
+    font-weight: medium;
+    font-style: normal;
 }

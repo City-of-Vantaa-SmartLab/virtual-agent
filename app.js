@@ -11,6 +11,22 @@ var io = require('socket.io')(server);
 var session = require('express-session');
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 server.listen(80);
+var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+// Set up Conversation service wrapper.
+var conversation = new ConversationV1({
+    username: '32204d2b-3d0e-482f-8b2e-260c150f76d8', // replace with username from service key
+    password: 'diwBYdais1sW', // replace with password from service key
+    path: {
+        workspace_id: '893e4e9e-eb10-4ed5-a0fd-6bb2d2eaa232'
+    }, // replace with workspace ID
+    version_date: '2016-07-11'
+});
+// Start conversation with empty message.
+//conversation.message({}, processResponse);
+// Process the conversation response.
+var watsonIn;
+var watsonIntent;
+var data;
 // configuration =================
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 app.use(morgan('dev')); // log every request to the console
